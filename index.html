@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Almeida | Desenvolvedor de Software</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="plus-grid"></div>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">william.dev</a>
+            <div class="nav-actions">
+                <a href="#about" class="nav-link">Sobre</a>
+                <a href="#projects" class="nav-link">Projetos</a>
+                <a href="#experience" class="nav-link">Experiência</a>
+                <div class="theme-toggle"><i class="fas fa-moon"></i></div>
+                <div class="lang-switch">PT</div>
+                <a href="#" class="btn-coffee"><i class="fas fa-coffee"></i> Comprar um café</a>
+            </div>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero" class="hero container">
+            <div class="hero-left">
+                <div class="welcome-badge">
+                    <span class="pulse-dot"></span> Bem-vindo ao meu portfólio
+                </div>
+                <h1 class="title">
+                    <span class="greeting">Olá, eu sou</span><br>
+                    William Almeida
+                </h1>
+                <h2 class="role-tag">&lt; Desenvolvedor de Software /&gt;</h2>
+                <p class="description">
+                    Tenho 20 anos e sou apaixonado por criar soluções web elegantes e funcionais.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">3+</span>
+                        <span class="stat-text">Anos de<br>Experiência</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">10+</span>
+                        <span class="stat-text">Projetos<br>Entregues</span>
+                    </div>
+                </div>
+                <div class="hero-tech-icons">
+                    <!-- Tech stack icons -->
+                    <i class="fab fa-react"></i>
+                    <i class="fab fa-node-js"></i>
+                    <i class="fab fa-js"></i>
+                    <i class="fab fa-python"></i>
+                    <i class="fas fa-database"></i>
+                </div>
+            </div>
+            
+            <div class="hero-right">
+                <div class="code-window glass-card">
+                    <div class="window-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="window-title">developer.js</span>
+                    </div>
+                    <div class="code-content">
+<pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
+    <span class="property">name</span>: <span class="string">"William Almeida"</span>,
+    <span class="property">age</span>: <span class="number">20</span>,
+    <span class="property">role</span>: <span class="string">"Desenvolvedor de Software"</span>,
+    <span class="property">skills</span>: [
+        <span class="string">"React"</span>, <span class="string">"Node.js"</span>, <span class="string">"Python"</span>, <span class="string">"SQL"</span>
+    ],
+    <span class="property">passionateAbout</span>: <span class="string">"Criar soluções elegantes"</span>,
+    <span class="method">code</span>: <span class="keyword">function</span>() {
+        <span class="keyword">return</span> <span class="string">"Transformando ideias em experiências digitais excepcionais"</span>;
+    }
+};
+
+<span class="variable">developer</span>.<span class="method">code</span>();</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about container section">
+            <h2 class="section-title">Sobre <span class="text-orange">Mim</span></h2>
+            <div class="about-grid">
+                <div class="about-image-wrapper">
+                    <div class="about-glow"></div>
+                    <img src="assets/WhatsApp%20Image%202026-03-21%20at%2018.41.09.jpeg" alt="William Almeida" class="profile-image">
+                </div>
+                <div class="about-content">
+                    <h3>Transformando ideias em experiências digitais excepcionais</h3>
+                    <p>
+                        Olá! Sou o William. Aos 20 anos, tenho uma profunda paixão por tecnologia e desenvolvimento de software. Atualmente, focado em criar aplicações web modernas e completas.
+                    </p>
+                    <p>
+                        Uma das minhas coisas favoritas para fazer no meu tempo livre é construir novas arquiteturas para me desafiar com novos padrões de desenvolvimento. Além disso, estou sempre interessado em aprender novas tecnologias.
+                    </p>
+                    <a href="#projects" class="btn-outline-orange">Ver projetos <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills container section">
+            <h2 class="section-title">Habilidades <span class="text-orange">Técnicas</span></h2>
+            <p class="section-subtitle">Minhas principais proficiências em desenvolvimento.</p>
+            
+            <div class="skills-grid">
+                <!-- Skill cards -->
+                <div class="skill-card glass-card">
+                    <div class="skill-header">
+                        <i class="fab fa-react skill-icon text-blue"></i>
+                        <div>
+                            <h4>React / Next.js</h4>
+                            <span class="skill-category">Frontend</span>
+                        </div>
+                    </div>
+                    <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
+                </div>
+                <div class="skill-card glass-card">
+                    <div class="skill-header">
+                        <i class="fab fa-node-js skill-icon text-green"></i>
+                        <div>
+                            <h4>Node.js / Express</h4>
+                            <span class="skill-category">Backend</span>
+                        </div>
+                    </div>
+                    <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
+                </div>
+                <div class="skill-card glass-card">
+                    <div class="skill-header">
+                        <i class="fab fa-python skill-icon text-yellow"></i>
+                        <div>
+                            <h4>Python</h4>
+                            <span class="skill-category">Backend / Scripting</span>
+                        </div>
+                    </div>
+                    <div class="progress-bar"><div class="progress" style="width: 70%"></div></div>
+                </div>
+                <div class="skill-card glass-card">
+                    <div class="skill-header">
+                        <i class="fas fa-database skill-icon text-orange"></i>
+                        <div>
+                            <h4>SQL / NoSQL</h4>
+                            <span class="skill-category">Database</span>
+                        </div>
+                    </div>
+                    <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects container section">
+            <h2 class="section-title">Meus <span class="text-orange">Projetos</span></h2>
+            <p class="section-subtitle">Explore alguns dos meus trabalhos recentes, demonstrando minhas habilidades.</p>
+            
+            <div class="projects-grid">
+                <div class="project-card glass-card">
+                    <div class="project-image">
+                        <div class="project-mockup"><i class="fas fa-plane"></i></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>App de Viagens</h3>
+                        <div class="tech-pills">
+                            <span class="pill">React</span>
+                            <span class="pill">Node.js</span>
+                            <span class="pill">MongoDB</span>
+                        </div>
+                        <p>Aplicativo completo de planejamento e gestão de viagens com roteiros inteligentes e compartilhamento de experiências.</p>
+                        <ul class="project-features">
+                            <li>Planejamento inteligente de roteiros</li>
+                            <li>Compartilhamento e colaboração em grupo</li>
+                            <li>Modo offline</li>
+                        </ul>
+                        <div class="project-actions">
+                            <a href="#" class="btn-primary"><i class="fas fa-external-link-alt"></i> Visitar Website</a>
+                            <a href="#" class="btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card">
+                    <div class="project-image">
+                        <div class="project-mockup"><i class="fas fa-gamepad"></i></div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Spark Tracker</h3>
+                        <div class="tech-pills">
+                            <span class="pill">React Native</span>
+                            <span class="pill">Firebase</span>
+                        </div>
+                        <p>Contador de vida avançado para Magic: The Gathering com suporte multiplayer, estatísticas detalhadas e personalização.</p>
+                        <ul class="project-features">
+                            <li>Contador para até 6 jogadores</li>
+                            <li>Acompanhamento de dano de comandante</li>
+                            <li>Temas personalizáveis</li>
+                        </ul>
+                        <div class="project-actions">
+                            <a href="#" class="btn-primary"><i class="fas fa-external-link-alt"></i> Visitar App</a>
+                            <a href="#" class="btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience container section">
+            <h2 class="section-title">Minha <span class="text-orange">Jornada</span></h2>
+            
+            <div class="experience-list">
+                <div class="exp-item glass-card">
+                    <div class="exp-header">
+                        <div class="exp-title">
+                            <h3>Desenvolvedor Full Stack Freelancer</h3>
+                            <a href="#" class="company">Autônomo</a>
+                        </div>
+                        <span class="exp-date">2023 - Presente</span>
+                    </div>
+                    <div class="tech-pills">
+                        <span class="pill">React</span>
+                        <span class="pill">Node.js</span>
+                        <span class="pill">Tailwind</span>
+                    </div>
+                    <p class="exp-desc">
+                        Construção de aplicações web sob medida para clientes, com foco em design responsivo e backends de alta performance. Implementação de soluções de e-commerce e landing pages otimizadas.
+                    </p>
+                </div>
+
+                <div class="exp-item glass-card">
+                    <div class="exp-header">
+                        <div class="exp-title">
+                            <h3>Estagiário de Desenvolvimento Frontend</h3>
+                            <a href="#" class="company">Tech Solutions</a>
+                        </div>
+                        <span class="exp-date">2022 - 2023</span>
+                    </div>
+                    <div class="tech-pills">
+                        <span class="pill">HTML/CSS</span>
+                        <span class="pill">JavaScript</span>
+                        <span class="pill">Git</span>
+                    </div>
+                    <p class="exp-desc">
+                        Auxiliei no desenvolvimento de interfaces de usuário modernas. Ganhei experiência prática com arquiteturas baseadas em componentes e metodologias ágeis de desenvolvimento.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h2>William Almeida</h2>
+                    <p>Desenvolvedor de Software</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 William Almeida. Todos os direitos reservados.</p>
+                <a href="#" class="coffee-link">Buy me a coffee <i class="fas fa-coffee"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
