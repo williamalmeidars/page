@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>William Almeida | Desenvolvedor de Software</title>
+    <title data-i18n="title">William Almeida | Desenvolvedor de Software</title>
+    <meta name="description"
+        content="Portfólio de William Almeida, Desenvolvedor de Software Full Stack especializado em React, Node.js e Python. Criando soluções web elegantes e funcionais.">
+    <meta name="keywords"
+        content="William Almeida, Desenvolvedor, Software, Full Stack, React, Node.js, Portfólio, Web">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <div class="plus-grid"></div>
 
@@ -15,12 +23,30 @@
         <div class="container nav-container">
             <a href="#" class="logo">william.dev</a>
             <div class="nav-actions">
-                <a href="#about" class="nav-link">Sobre</a>
-                <a href="#projects" class="nav-link">Projetos</a>
-                <a href="#experience" class="nav-link">Experiência</a>
+                <a href="#about" class="nav-link" data-i18n="nav-about">Sobre</a>
+                <a href="#projects" class="nav-link" data-i18n="nav-projects">Projetos</a>
+                <a href="#experience" class="nav-link" data-i18n="nav-experience">Experiência</a>
                 <div class="theme-toggle"><i class="fas fa-moon"></i></div>
-                <div class="lang-switch">PT</div>
-                <a href="#" class="btn-coffee"><i class="fas fa-coffee"></i> Comprar um café</a>
+                <div class="lang-dropdown">
+                    <div class="lang-current">
+                        <span id="current-lang-text">PT</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <ul class="lang-menu">
+                        <li data-lang="pt"><img src="https://flagcdn.com/br.svg" alt="PT" class="flag-icon"> PT</li>
+                        <li data-lang="en"><img src="https://flagcdn.com/gb.svg" alt="EN" class="flag-icon"> EN</li>
+                        <li data-lang="es"><img src="https://flagcdn.com/es.svg" alt="ES" class="flag-icon"> ES</li>
+                        <li data-lang="fr"><img src="https://flagcdn.com/fr.svg" alt="FR" class="flag-icon"> FR</li>
+                        <li data-lang="de"><img src="https://flagcdn.com/de.svg" alt="DE" class="flag-icon"> DE</li>
+                        <li data-lang="it"><img src="https://flagcdn.com/it.svg" alt="IT" class="flag-icon"> IT</li>
+                        <li data-lang="ja"><img src="https://flagcdn.com/jp.svg" alt="JA" class="flag-icon"> JA</li>
+                        <li data-lang="ru"><img src="https://flagcdn.com/ru.svg" alt="RU" class="flag-icon"> RU</li>
+                        <li data-lang="zh"><img src="https://flagcdn.com/cn.svg" alt="ZH" class="flag-icon"> ZH</li>
+                        <li data-lang="ko"><img src="https://flagcdn.com/kr.svg" alt="KO" class="flag-icon"> KO</li>
+                        <li data-lang="kp"><img src="https://flagcdn.com/kp.svg" alt="KP" class="flag-icon"> KP</li>
+                    </ul>
+                </div>
+                <!-- <a href="#" class="btn-coffee"><i class="fas fa-coffee"></i> Comprar um café</a> -->
             </div>
             <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
         </div>
@@ -30,24 +56,24 @@
         <section id="hero" class="hero container">
             <div class="hero-left">
                 <div class="welcome-badge">
-                    <span class="pulse-dot"></span> Bem-vindo ao meu portfólio
+                    <span class="pulse-dot"></span> <span data-i18n="hero-welcome">Bem-vindo ao meu portfólio</span>
                 </div>
                 <h1 class="title">
-                    <span class="greeting">Olá, eu sou</span><br>
+                    <span class="greeting" data-i18n="hero-greeting">Olá, eu sou</span><br>
                     William Almeida
                 </h1>
-                <h2 class="role-tag">&lt; Desenvolvedor de Software /&gt;</h2>
-                <p class="description">
+                <h2 class="role-tag" data-i18n="hero-role">&lt; Desenvolvedor de Software /&gt;</h2>
+                <p class="description" data-i18n="hero-desc">
                     Tenho 20 anos e sou apaixonado por criar soluções web elegantes e funcionais.
                 </p>
                 <div class="hero-stats">
                     <div class="stat-item">
                         <span class="stat-num">3+</span>
-                        <span class="stat-text">Anos de<br>Experiência</span>
+                        <span class="stat-text" data-i18n="hero-stat-exp">Anos de<br>Experiência</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-num">10+</span>
-                        <span class="stat-text">Projetos<br>Entregues</span>
+                        <span class="stat-text" data-i18n="hero-stat-projects">Projetos<br>Entregues</span>
                     </div>
                 </div>
                 <div class="hero-tech-icons">
@@ -59,7 +85,7 @@
                     <i class="fas fa-database"></i>
                 </div>
             </div>
-            
+
             <div class="hero-right">
                 <div class="code-window glass-card">
                     <div class="window-header">
@@ -69,7 +95,7 @@
                         <span class="window-title">developer.js</span>
                     </div>
                     <div class="code-content">
-<pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
+                        <pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
     <span class="property">name</span>: <span class="string">"William Almeida"</span>,
     <span class="property">age</span>: <span class="number">20</span>,
     <span class="property">role</span>: <span class="string">"Desenvolvedor de Software"</span>,
@@ -90,30 +116,38 @@
 
         <!-- About Me Section -->
         <section id="about" class="about container section">
-            <h2 class="section-title">Sobre <span class="text-orange">Mim</span></h2>
+            <h2 class="section-title"><span data-i18n="about-title-1">Sobre</span> <span class="text-orange"
+                    data-i18n="about-title-2">Mim</span></h2>
             <div class="about-grid">
                 <div class="about-image-wrapper">
                     <div class="about-glow"></div>
-                    <img src="assets/WhatsApp%20Image%202026-03-21%20at%2018.41.09.jpeg" alt="William Almeida" class="profile-image">
+                    <img src="assets/WhatsApp%20Image%202026-03-21%20at%2018.41.09.jpeg" alt="William Almeida"
+                        class="profile-image">
                 </div>
                 <div class="about-content">
-                    <h3>Transformando ideias em experiências digitais excepcionais</h3>
-                    <p>
-                        Olá! Sou o William. Aos 20 anos, tenho uma profunda paixão por tecnologia e desenvolvimento de software. Atualmente, focado em criar aplicações web modernas e completas.
+                    <h3 data-i18n="about-subtitle">Transformando ideias em experiências digitais excepcionais</h3>
+                    <p data-i18n="about-p1">
+                        Olá! Sou o William. Aos 20 anos, tenho uma profunda paixão por tecnologia e desenvolvimento de
+                        software. Atualmente, focado em criar aplicações web modernas e completas.
                     </p>
-                    <p>
-                        Uma das minhas coisas favoritas para fazer no meu tempo livre é construir novas arquiteturas para me desafiar com novos padrões de desenvolvimento. Além disso, estou sempre interessado em aprender novas tecnologias.
+                    <p data-i18n="about-p2">
+                        Uma das minhas coisas favoritas para fazer no meu tempo livre é construir novas arquiteturas
+                        para me desafiar com novos padrões de desenvolvimento. Além disso, estou sempre interessado em
+                        aprender novas tecnologias.
                     </p>
-                    <a href="#projects" class="btn-outline-orange">Ver projetos <i class="fas fa-arrow-right"></i></a>
+                    <a href="#projects" class="btn-outline-orange"><span data-i18n="about-btn">Ver projetos</span> <i
+                            class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </section>
 
         <!-- Skills Section -->
         <section id="skills" class="skills container section">
-            <h2 class="section-title">Habilidades <span class="text-orange">Técnicas</span></h2>
-            <p class="section-subtitle">Minhas principais proficiências em desenvolvimento.</p>
-            
+            <h2 class="section-title"><span data-i18n="skills-title-1">Habilidades</span> <span class="text-orange"
+                    data-i18n="skills-title-2">Técnicas</span></h2>
+            <p class="section-subtitle" data-i18n="skills-subtitle">Minhas principais proficiências em desenvolvimento.
+            </p>
+
             <div class="skills-grid">
                 <!-- Skill cards -->
                 <div class="skill-card glass-card">
@@ -124,7 +158,9 @@
                             <span class="skill-category">Frontend</span>
                         </div>
                     </div>
-                    <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%"></div>
+                    </div>
                 </div>
                 <div class="skill-card glass-card">
                     <div class="skill-header">
@@ -134,7 +170,9 @@
                             <span class="skill-category">Backend</span>
                         </div>
                     </div>
-                    <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%"></div>
+                    </div>
                 </div>
                 <div class="skill-card glass-card">
                     <div class="skill-header">
@@ -144,7 +182,9 @@
                             <span class="skill-category">Backend / Scripting</span>
                         </div>
                     </div>
-                    <div class="progress-bar"><div class="progress" style="width: 70%"></div></div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%"></div>
+                    </div>
                 </div>
                 <div class="skill-card glass-card">
                     <div class="skill-header">
@@ -154,93 +194,126 @@
                             <span class="skill-category">Database</span>
                         </div>
                     </div>
-                    <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Tech Stack Grid -->
+            <div class="tech-stack-container">
+                <h3 class="subsection-title" data-i18n="skills-stack-title">Ferramentas & Tecnologias</h3>
+                <div class="tech-stack-grid">
+                    <div class="tech-item" title="PHP"><i class="fab fa-php"></i><span>PHP</span></div>
+                    <div class="tech-item" title="JavaScript"><i class="fab fa-js"></i><span>JS</span></div>
+                    <div class="tech-item" title="Node.js"><i class="fab fa-node-js"></i><span>Node</span></div>
+                    <div class="tech-item" title="Python"><i class="fab fa-python"></i><span>Python</span></div>
+                    <div class="tech-item" title="Go"><i class="fas fa-code"></i><span>Go</span></div>
+                    <div class="tech-item" title="C"><i class="fas fa-terminal"></i><span>C</span></div>
+                    <div class="tech-item" title="C#"><i class="fas fa-hashtag"></i><span>C#</span></div>
+                    <div class="tech-item" title="Lua"><i class="fas fa-moon"></i><span>Lua</span></div>
+                    <div class="tech-item" title="React"><i class="fab fa-react"></i><span>React</span></div>
+                    <div class="tech-item" title="Vue"><i class="fab fa-vuejs"></i><span>Vue</span></div>
+                    <div class="tech-item" title="Tailwind"><i class="fab fa-css3-alt"></i><span>Tailwind</span></div>
+                    <div class="tech-item" title="HTML5"><i class="fab fa-html5"></i><span>HTML5</span></div>
+                    <div class="tech-item" title="MySQL"><i class="fas fa-database"></i><span>MySQL</span></div>
+                    <div class="tech-item" title="PostgreSQL"><i class="fas fa-database"></i><span>Postgres</span></div>
+                    <div class="tech-item" title="MongoDB"><i class="fas fa-leaf"></i><span>MongoDB</span></div>
+                    <div class="tech-item" title="SQLite"><i class="fas fa-database"></i><span>SQLite</span></div>
+                    <div class="tech-item" title="Docker"><i class="fab fa-docker"></i><span>Docker</span></div>
+                    <div class="tech-item" title="Linux"><i class="fab fa-linux"></i><span>Linux</span></div>
+                    <div class="tech-item" title="AWS"><i class="fab fa-aws"></i><span>AWS</span></div>
+                    <div class="tech-item" title="Azure"><i class="fab fa-microsoft"></i><span>Azure</span></div>
+                    <div class="tech-item" title="Cloudflare"><i class="fab fa-cloudflare"></i><span>Cloudflare</span>
+                    </div>
+                    <div class="tech-item" title="Git"><i class="fab fa-git-alt"></i><span>Git</span></div>
+                    <div class="tech-item" title="GitHub"><i class="fab fa-github"></i><span>GitHub</span></div>
+                    <div class="tech-item" title="GitLab"><i class="fab fa-gitlab"></i><span>GitLab</span></div>
+                    <div class="tech-item" title="TensorFlow"><i class="fas fa-brain"></i><span>TensorFlow</span></div>
+                    <div class="tech-item" title="PyTorch"><i class="fas fa-fire"></i><span>PyTorch</span></div>
+                    <div class="tech-item" title="Android"><i class="fab fa-android"></i><span>Android</span></div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
         <section id="projects" class="projects container section">
-            <h2 class="section-title">Meus <span class="text-orange">Projetos</span></h2>
-            <p class="section-subtitle">Explore alguns dos meus trabalhos recentes, demonstrando minhas habilidades.</p>
-            
+            <h2 class="section-title"><span data-i18n="projects-title-1">Meus</span> <span class="text-orange"
+                    data-i18n="projects-title-2">Projetos</span></h2>
+            <p class="section-subtitle" data-i18n="projects-subtitle">Explore alguns dos meus trabalhos recentes,
+                demonstrando minhas habilidades.</p>
+
             <div class="projects-grid">
                 <div class="project-card glass-card">
-                    <div class="project-image">
-                        <div class="project-mockup"><i class="fas fa-plane"></i></div>
-                    </div>
+                    <a href="project.html?id=proj1" class="project-image">
+                        <img src="assets/travel_app.png" alt="App de Viagens" class="project-thumb">
+                        <div class="project-overlay">
+                            <span class="view-details" data-i18n="proj-details">Ver Detalhes</span>
+                        </div>
+                    </a>
                     <div class="project-info">
-                        <h3>App de Viagens</h3>
+                        <h3 data-i18n="proj1-title">App de Viagens</h3>
                         <div class="tech-pills">
                             <span class="pill">React</span>
                             <span class="pill">Node.js</span>
                             <span class="pill">MongoDB</span>
                         </div>
-                        <p>Aplicativo completo de planejamento e gestão de viagens com roteiros inteligentes e compartilhamento de experiências.</p>
-                        <ul class="project-features">
-                            <li>Planejamento inteligente de roteiros</li>
-                            <li>Compartilhamento e colaboração em grupo</li>
-                            <li>Modo offline</li>
-                        </ul>
-                        <div class="project-actions">
-                            <a href="#" class="btn-primary"><i class="fas fa-external-link-alt"></i> Visitar Website</a>
-                            <a href="#" class="btn-secondary"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
+                        <p data-i18n="proj1-desc">Aplicativo completo de planejamento e gestão de viagens com roteiros
+                            inteligentes e compartilhamento de experiências.</p>
                     </div>
                 </div>
 
                 <div class="project-card glass-card">
-                    <div class="project-image">
-                        <div class="project-mockup"><i class="fas fa-gamepad"></i></div>
-                    </div>
+                    <a href="project.html?id=proj2" class="project-image">
+                        <img src="assets/spark_tracker.png" alt="Spark Tracker" class="project-thumb">
+                        <div class="project-overlay">
+                            <span class="view-details" data-i18n="proj-details">Ver Detalhes</span>
+                        </div>
+                    </a>
                     <div class="project-info">
-                        <h3>Spark Tracker</h3>
+                        <h3 data-i18n="proj2-title">Spark Tracker</h3>
                         <div class="tech-pills">
                             <span class="pill">React Native</span>
                             <span class="pill">Firebase</span>
+                            <span class="pill">Cloud Functions</span>
                         </div>
-                        <p>Contador de vida avançado para Magic: The Gathering com suporte multiplayer, estatísticas detalhadas e personalização.</p>
-                        <ul class="project-features">
-                            <li>Contador para até 6 jogadores</li>
-                            <li>Acompanhamento de dano de comandante</li>
-                            <li>Temas personalizáveis</li>
-                        </ul>
-                        <div class="project-actions">
-                            <a href="#" class="btn-primary"><i class="fas fa-external-link-alt"></i> Visitar App</a>
-                            <a href="#" class="btn-secondary"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
+                        <p data-i18n="proj2-desc">Contador de vida avançado para Magic: The Gathering com suporte
+                            multiplayer, estatísticas detalhadas e personalização.</p>
                     </div>
                 </div>
+
             </div>
         </section>
 
         <!-- Experience Section -->
         <section id="experience" class="experience container section">
-            <h2 class="section-title">Minha <span class="text-orange">Jornada</span></h2>
-            
+            <h2 class="section-title"><span data-i18n="exp-title-1">Minha</span> <span class="text-orange"
+                    data-i18n="exp-title-2">Jornada</span></h2>
+
             <div class="experience-list">
                 <div class="exp-item glass-card">
                     <div class="exp-header">
                         <div class="exp-title">
-                            <h3>Desenvolvedor Full Stack Freelancer</h3>
-                            <a href="#" class="company">Autônomo</a>
+                            <h3 data-i18n="exp1-role">Desenvolvedor Full Stack Freelancer</h3>
+                            <a href="#" class="company" data-i18n="exp-freelance">Autônomo</a>
                         </div>
-                        <span class="exp-date">2023 - Presente</span>
+                        <span class="exp-date" data-i18n="exp1-date">2023 - Presente</span>
                     </div>
                     <div class="tech-pills">
                         <span class="pill">React</span>
                         <span class="pill">Node.js</span>
                         <span class="pill">Tailwind</span>
                     </div>
-                    <p class="exp-desc">
-                        Construção de aplicações web sob medida para clientes, com foco em design responsivo e backends de alta performance. Implementação de soluções de e-commerce e landing pages otimizadas.
+                    <p class="exp-desc" data-i18n="exp1-desc">
+                        Construção de aplicações web sob medida para clientes, com foco em design responsivo e backends
+                        de alta performance. Implementação de soluções de e-commerce e landing pages otimizadas.
                     </p>
                 </div>
 
                 <div class="exp-item glass-card">
                     <div class="exp-header">
                         <div class="exp-title">
-                            <h3>Estagiário de Desenvolvimento Frontend</h3>
+                            <h3 data-i18n="exp2-role">Estagiário de Desenvolvimento Frontend</h3>
                             <a href="#" class="company">Tech Solutions</a>
                         </div>
                         <span class="exp-date">2022 - 2023</span>
@@ -250,8 +323,9 @@
                         <span class="pill">JavaScript</span>
                         <span class="pill">Git</span>
                     </div>
-                    <p class="exp-desc">
-                        Auxiliei no desenvolvimento de interfaces de usuário modernas. Ganhei experiência prática com arquiteturas baseadas em componentes e metodologias ágeis de desenvolvimento.
+                    <p class="exp-desc" data-i18n="exp2-desc">
+                        Auxiliei no desenvolvimento de interfaces de usuário modernas. Ganhei experiência prática com
+                        arquiteturas baseadas em componentes e metodologias ágeis de desenvolvimento.
                     </p>
                 </div>
             </div>
@@ -263,7 +337,7 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <h2>William Almeida</h2>
-                    <p>Desenvolvedor de Software</p>
+                    <p data-i18n="hero-role">Desenvolvedor de Software</p>
                 </div>
                 <div class="footer-social">
                     <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
@@ -272,7 +346,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 William Almeida. Todos os direitos reservados.</p>
+                <p data-i18n="footer-rights">&copy; 2026 William Almeida. Todos os direitos reservados.</p>
                 <a href="#" class="coffee-link">Buy me a coffee <i class="fas fa-coffee"></i></a>
             </div>
         </div>
@@ -280,4 +354,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

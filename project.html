@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Projeto | William Almeida</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Estilos específicos da página de projeto agora estão no style.css -->
+</head>
+<body>
+    <div class="plus-grid"></div>
+
+    <nav class="navbar scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">william.dev</a>
+            <div class="nav-actions">
+                <a href="index.html#projects" class="nav-link">Voltar para Projetos</a>
+                <div class="theme-toggle"><i class="fas fa-moon"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="project-page container">
+        <a href="index.html#projects" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar</a>
+        
+        <div id="project-loading" style="text-align: center; padding: 4rem;">
+            <i class="fas fa-spinner fa-spin fa-3x" style="color: var(--accent-orange);"></i>
+        </div>
+
+        <div id="project-content" style="display: none;">
+            <div class="project-header">
+                <h1 id="proj-title">Project Name</h1>
+                <div id="proj-tech" class="tech-pills" style="justify-content: center;"></div>
+            </div>
+
+            <div class="project-container">
+                <div class="project-visual">
+                    <img id="proj-image" src="" alt="Project Preview" class="project-main-img">
+                </div>
+                <div class="project-details-content">
+                    <div class="detail-section">
+                        <h2 data-i18n="modal-about">Sobre o Projeto</h2>
+                        <p id="proj-desc">Detailed description...</p>
+                    </div>
+
+                    <div class="detail-section">
+                        <h2 data-i18n="modal-features">Principais Recursos</h2>
+                        <ul id="proj-features-list" class="project-features"></ul>
+                    </div>
+
+                    <div class="project-meta-grid">
+                        <div class="meta-item">
+                            <span data-i18n="modal-status">Status</span>
+                            <span id="proj-status" class="text-orange">Live</span>
+                        </div>
+                        <div class="meta-item">
+                            <span data-i18n="modal-year">Ano</span>
+                            <span id="proj-year">2026</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Project page specific logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const projectId = urlParams.get('id');
+            
+            // Wait for projectsData to be available (it's in script.js)
+            // Since we're using a common script.js, we need to wait or ensure it's exposed.
+            // I'll add a check for the existence of projectsData.
+            
+            const checkData = setInterval(() => {
+                if (typeof projectsData !== 'undefined') {
+                    clearInterval(checkData);
+                    loadProject(projectId);
+                }
+            }, 50);
+
+            function loadProject(id) {
+                const project = projectsData[id];
+                const loading = document.getElementById('project-loading');
+                const content = document.getElementById('project-content');
+
+                if (!project) {
+                    loading.innerHTML = '<h2>Projeto não encontrado</h2><a href="index.html">Voltar para Home</a>';
+                    return;
+                }
+
+                document.getElementById('proj-title').textContent = project.title[currentLang] || project.title['en'];
+                document.getElementById('page-title').textContent = (project.title[currentLang] || project.title['en']) + ' | William Almeida';
+                document.getElementById('proj-image').src = project.image;
+                document.getElementById('proj-desc').textContent = project.desc[currentLang] || project.desc['en'];
+                
+                document.getElementById('proj-tech').innerHTML = project.tech.map(t => `<span class="pill">${t}</span>`).join('');
+                
+                const features = project.features[currentLang] || project.features['en'];
+                document.getElementById('proj-features-list').innerHTML = features.map(f => `<li>${f}</li>`).join('');
+                
+                document.getElementById('proj-status').textContent = project.status[currentLang] || project.status['en'];
+                document.getElementById('proj-year').textContent = project.year;
+                
+                loading.style.display = 'none';
+                content.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
